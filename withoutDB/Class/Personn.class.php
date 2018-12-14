@@ -57,7 +57,7 @@ class Personne {
   }
 
   public function affiche() {
-    echo "<br>" . $this->getCivilite() . ". " . $this->getNom() . ", " . $this->getPrenom() . ", " . $this->getAge(). " ans";
+    echo "<br>" . $this->getCivilite() . ". " . $this->getNom() . " " . $this->getPrenom() . ", " . $this->getAge(). " ans";
   }
 
 }

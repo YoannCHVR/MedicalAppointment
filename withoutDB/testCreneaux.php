@@ -41,7 +41,7 @@ try {
 
 } catch(Exception $e) {
 
-
+}
 
 //initialisation patient : "ID", "Civilité", "Nom", "Prénom", "Âge", "Problème", "Créneaux";
 //$patient0 = new Patient(0, "Mr", "LEDUC", "Sébastien", "19", "Yeux", "matin");
@@ -73,7 +73,7 @@ $nbMedecinDisponible = Medecin::afficheNbMedecin() - Medecin::countDisponible();
         <div class="content">
             <h3>Prendre un rendez-vous :</h3>
             <span class="nbMedecin">Il y a actuellement <?php echo $nbMedecinDisponible; ?> médecins spécialistes disponibles</span>
-            <?php echo "<span class='error'>" . $e->getMessage() . "</span>"; ?>
+            <?php //echo "<span class='error'>" . $e->getMessage() . "</span>"; ?>
             <form id="formulaire" action="" method="post">
                 <!-- formulaire de récupération des informations du patient -->
                 <select name="civilite">
@@ -105,9 +105,3 @@ $nbMedecinDisponible = Medecin::afficheNbMedecin() - Medecin::countDisponible();
     </body>
 
     </html>
-
-    <?php
-
-  }
-
-  ?>

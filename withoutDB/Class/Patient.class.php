@@ -30,7 +30,7 @@ class Patient extends Personne {
 
   public function affiche() {
     parent::affiche();
-    echo " à un problème au " . $this->getProbleme() . " et souhaite prendre rendez-vous le " . $this->getCreneaux() . ".<br>";
+    echo ", à un problème au " . $this->getProbleme() . " et souhaite prendre rendez-vous le " . $this->getCreneaux() . ".<br>";
   }
 
 }

@@ -8,13 +8,15 @@ if(isset($_POST["getRdv"]))
       $civilite = $_POST["civilite"];
       $nom = $_POST["nom"];
       $prenom = $_POST["prenom"];
-      $date = $_POST["date"];
+      $date = date('Y', strtotime($_POST["date"]));
       $probleme = $_POST["probleme"];
       $creneaux = $_POST["creneaux"];
 
-      $actuallyDate = date("Y"); //get l'année actuelle
+      $currentDate = date("Y"); //get l'année actuelle
 
-      $patient = new Patient(0, $civilite, $nom, $prenom, $actuallyDate - $date, $probleme, $creneaux);
+      $age = $currentDate - $date;
+
+      $patient = new Patient(0, $civilite, $nom, $prenom, $age, $probleme, $creneaux);
       $patient -> affiche();
 
       $creneaux = $patient->getCreneaux();
